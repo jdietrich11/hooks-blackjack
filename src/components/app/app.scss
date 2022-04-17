@@ -1,0 +1,46 @@
+.hidden {
+  display: none;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+@keyframes phaseIn {
+  0% {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  50% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes phaseOut {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50%;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    display: none;
+  }
+}

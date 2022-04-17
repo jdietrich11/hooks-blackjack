@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 6rem;
+  width: 80vw;
+  max-width: 120rem;
+  margin: auto;
+  background-image: linear-gradient(to bottom right, orangered, purple);
+
+  &__logo {
+    height: 3rem;
+    width: 3rem;
+    background-color: black;
+    border-radius: 50%;
+  }
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  &__new-game {
+    border: 2px solid black;
+    padding: 1rem 1rem;
+    background-color: aqua;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+}
+
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  border: 2px solid black;
+}

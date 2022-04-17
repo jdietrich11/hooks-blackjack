@@ -1,0 +1,209 @@
+.playfield {
+  width: 80vw;
+  background-color: green;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+
+  position: relative;
+}
+
+.bidding {
+  margin-left: 1rem;
+  &__bank {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+  &__input {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    border: 3px solid black;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+  }
+  &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    font-size: 3rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: none;
+      transform: translateY(0);
+    }
+  }
+}
+
+.user-inputs {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+
+  & .btn {
+    height: 5rem;
+    width: 10rem;
+    border: 3px solid black;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    &:hover {
+      transform: translateY(-1px);
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &__end {
+      background-color: red;
+      z-index: 2;
+      &-option {
+        animation: phaseOut 3s linear;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &__new {
+      animation: phaseIn 3s linear;
+      animation-fill-mode: backwards, forwards;
+      width: 90%;
+      font-size: 3rem;
+      border: 3px solid black;
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(to bottom right, red, purple, blue);
+
+      &:hover {
+        transform: translateY(-1px);
+        cursor: pointer;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+      &-option {
+        animation: phaseOut 3s linear;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &__draw {
+      background-color: blue;
+      opacity: 1;
+      z-index: 2;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      &-option {
+        animation: phaseOut 3s linear;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.deck {
+  height: 15rem;
+  width: 10rem;
+  border: 3px solid black;
+  margin-right: 1rem;
+  border-radius: 3px;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/////////////////////////////////////////////
+// Value counters
+.dealer__value,
+.player__value {
+  position: absolute;
+  color: white;
+  font-size: 4rem;
+}
+.dealer__value {
+  left: 20%;
+  top: 12%;
+}
+.player__value {
+  right: 30%;
+  bottom: 20%;
+}
+
+/////////////////////////////////////////////
+// PlayerHand
+.player {
+  background-color: green;
+  width: 80vw;
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 1rem;
+  min-height: 15rem;
+}
+
+.card {
+  max-height: 15rem;
+  max-width: 10rem;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+///////////////////////////////////
+// Dealer
+.dealer {
+  background-color: green;
+  width: 80vw;
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 1rem;
+  min-height: 20rem;
+}
